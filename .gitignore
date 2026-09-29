@@ -1,0 +1,20 @@
+**/node_modules/
+**/dist/
+**/__pycache__/
+**/*.py[cod]
+**/.playwright-cli/
+
+.DS_Store
+Thumbs.db
+
+# Large production sources stay local; publish runnable web assets instead.
+*.blend
+*.blend1
+/labs_2/blender-loop-video/assets/models/source/
+/labs_2/immersive-future/public/assets/models/*-hunyuan-v1-web.glb
+/labs_2/immersive-future/public/assets/hunyuan-input/**/*.png
+/labs_2/immersive-future/public/assets/video-input/*.png
+
+# Video inputs and duplicate renders not used by the published pages.
+/labs_1/assets/*.mp4
+/labs_2/blender-loop-video/web-showcase/prototypes/continuous-video-v2-1080p/assets/*.mp4

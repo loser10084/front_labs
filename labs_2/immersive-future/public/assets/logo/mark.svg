@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <title>Future world orbital mark</title>
+  <path d="M32 8v48" stroke="currentColor" stroke-width="2"/>
+  <path d="M32 15c-9.389 0-17 7.611-17 17s7.611 17 17 17" stroke="currentColor" stroke-width="2"/>
+  <path d="M32 21c6.075 0 11 4.925 11 11S38.075 43 32 43" stroke="currentColor" stroke-width="2"/>
+  <path d="M9 32h46" stroke="currentColor" stroke-width="2" stroke-dasharray="2 5"/>
+  <circle cx="32" cy="32" r="3" fill="currentColor"/>
+</svg>

@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>VENUS — 1080p 连续滚动界面原型</title>
+    <link rel="icon" href="data:," />
+    <link rel="stylesheet" href="./prototype.css" />
+    <script src="./prototype.js" defer></script>
+  </head>
+  <body>
+    <div class="stage" aria-hidden="true">
+      <canvas id="story-canvas" class="stage__canvas" width="1920" height="1080"></canvas>
+      <img class="stage__capture-frame" id="capture-frame" src="./assets/frame-001.png" alt="" />
+      <div class="stage__shade"></div>
+      <div class="stage__grain"></div>
+      <svg class="seam" viewBox="0 0 120 1000" preserveAspectRatio="none">
+        <path class="seam__shadow" d="M18 0 C16 130 42 180 28 310 S78 470 48 600 S88 810 102 1000" />
+        <path class="seam__line" id="seam-line" d="M18 0 C16 130 42 180 28 310 S78 470 48 600 S88 810 102 1000" />
+      </svg>
+    </div>
+
+    <header class="masthead">
+      <a href="#opening" class="brand"><span>VENUS</span><i></i><span>断臂维纳斯</span></a>
+      <nav aria-label="原型导航"><a href="#form">形体</a><a href="#matter">材质</a><a href="#return">循环</a></nav>
+      <button type="button" class="scroll-mode" id="scroll-mode" aria-label="切换滚动输入模式">
+        <span>滚动</span><strong id="scroll-mode-value">直控</strong>
+      </button>
+      <button type="button" class="motion-control" id="motion-control" aria-label="暂停滚动影片">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5v14M16 5v14" /></svg>
+      </button>
+    </header>
+
+    <aside class="chapter-rail" aria-label="章节进度">
+      <span id="chapter-current">01</span>
+      <div><i id="chapter-fill"></i></div>
+      <span>05</span>
+    </aside>
+
+    <main class="story">
+      <section class="scene scene--opening is-active" id="opening" data-scene="0">
+        <div class="scene__content scene__content--left">
+          <h1><span>VENUS</span><span>RECONSTRUCTED</span></h1>
+          <p class="lead">一座雕塑，两种时间。</p>
+          <p class="body-copy">从古典形体出发，让破碎、修复与新材料在同一束光里相遇。</p>
+          <a class="explore" href="#form">向下探索 <span>↓</span></a>
+        </div>
+        <div class="timecode"><span>00:00</span><i></i><span>00:10</span></div>
+      </section>
+
+      <section class="scene scene--form" id="form" data-scene="1">
+        <div class="scene__content scene__content--left scene__content--compact">
+          <p class="scene-no">01 / FORM</p>
+          <h2>破碎，成为<br />新的表面。</h2>
+          <p class="body-copy">镜头抵近面部，古典轮廓保持安静；修复痕迹开始进入视野。</p>
+        </div>
+        <p class="edge-note">THE FORM REMAINS<br />THE SURFACE CHANGES</p>
+      </section>
+
+      <section class="scene scene--seam" id="seam" data-scene="2">
+        <div class="scene__content scene__content--left scene__content--compact">
+          <p class="scene-no">02 / REPAIR</p>
+          <h2>修复，不必<br />被隐藏。</h2>
+          <p class="body-copy">黑色表面与金属接缝穿过形体，让重建过程成为作品的一部分。</p>
+        </div>
+        <div class="measure" aria-hidden="true"><span>DETAIL 1:1</span><i></i><span>05.0 SEC</span></div>
+      </section>
+
+      <section class="scene scene--matter" id="matter" data-scene="3">
+        <div class="scene__content scene__content--left scene__content--materials">
+          <p class="scene-no">03 / MATERIAL MEMORY</p>
+          <h2>材料，记住<br />时间。</h2>
+          <div class="material-list">
+            <div><span>01</span><strong>石材</strong><small>古典轮廓</small></div>
+            <div><span>02</span><strong>黑色矿物</strong><small>修复结构</small></div>
+            <div><span>03</span><strong>金属接缝</strong><small>时间痕迹</small></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="scene scene--return" id="return" data-scene="4">
+        <div class="scene__content scene__content--left scene__content--compact">
+          <p class="scene-no">04 / RETURN</p>
+          <h2>回到全景，<br />循环继续。</h2>
+          <p class="body-copy">镜头回到最初位置，第 10 秒与第 0 秒衔接。</p>
+          <a class="explore" href="#opening">重新观看 <span>↑</span></a>
+        </div>
+        <div class="timecode"><span>00:10</span><i></i><span>LOOP</span></div>
+      </section>
+    </main>
+  </body>
+</html>

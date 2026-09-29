@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#171b18" />
+    <title>Fall Line House · Scroll Scrub</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./main.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <section class="scroll-story" id="story" aria-label="Fall Line House 滚动展示">
+        <div class="stage" id="stage" data-scene="0">
+          <div class="media-stack" id="media-stack">
+            <figure class="scene-media" data-media="0">
+              <img src="./assets/exterior-v2-hq.webp" alt="雾中山崖上的建筑外观" />
+            </figure>
+            <figure class="scene-media" data-media="1">
+              <img src="./assets/corridor-v2-hq.webp" alt="临水玻璃走廊" />
+            </figure>
+            <figure class="scene-media" data-media="2">
+              <img src="./assets/timber-v2-hq.webp" alt="暖木饰面室内空间" />
+            </figure>
+          </div>
+          <div class="stage-content">
+            <div class="topline" aria-hidden="true">
+              <span class="counter-window">
+                <span class="counter-track" id="counter-track">
+                  <span>01 / 03</span>
+                  <span>02 / 03</span>
+                  <span>03 / 03</span>
+                </span>
+              </span>
+            </div>
+
+            <div class="copy-stack">
+              <div class="scene-copy is-active" data-copy="0" aria-hidden="false">
+                <h1><span class="copy-line">FALL LINE</span><span class="copy-line">HOUSE</span></h1>
+              </div>
+              <div class="scene-copy" data-copy="1" aria-hidden="true">
+                <h2><span class="copy-line">THRESHOLD /</span><span class="copy-line">WATER SIDE</span></h2>
+              </div>
+              <div class="scene-copy" data-copy="2" aria-hidden="true">
+                <h2><span class="copy-line">TIMBER CORE</span></h2>
+              </div>
+            </div>
+
+            <div class="stage-footer" aria-hidden="true">
+              <div class="progress-track"><span id="progress-fill"></span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

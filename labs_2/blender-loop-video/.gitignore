@@ -1,0 +1,8 @@
+blend/*.blend1
+renders/frames/*
+renders/previews/*
+output/*
+!renders/frames/.gitkeep
+!renders/previews/.gitkeep
+!output/.gitkeep
+
